@@ -1,7 +1,7 @@
-Your project name, team name and team member(s) 
+* final code and demo to be added *
+
 Employee View, Natalie Raptoplous
 
-Describe what you are trying to build, why do you want to build it, what it will be useful for, how it will be used, etc. 
 An app that can add/view/find employees. would include all personal info and things like hourly wages, monthly salary, etc. It would be useful for companies,
 and I believe it is something I can make. Java has been the hardest language for me to learn, but I wanted to create something practical.
 
