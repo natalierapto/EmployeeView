@@ -10,3 +10,7 @@ Here it is blank, type the appropriate information into the text boxes.
 Letting the user know that the information has been added to data.txt
 
 ![image](https://user-images.githubusercontent.com/114167189/204423022-87678b1a-83cd-4ef6-ab8d-c220252b2ca9.png)
+
+This error means that there are letters in the ID, you will only be able to enter numbers here.
+![image](https://user-images.githubusercontent.com/114167189/204607017-e87a9f1d-a33c-45ef-9988-eeaa6a32d656.png)
+
