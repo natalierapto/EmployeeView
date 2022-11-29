@@ -5,7 +5,6 @@
 package com.mycompany.employeeregister;
 
 import javax.swing.JOptionPane;
-import java.util.ArrayList;
 import java.io.*;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -13,11 +12,13 @@ import java.nio.file.Path;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+
 public class frame extends javax.swing.JFrame {
 
     public frame() {
         initComponents();
     }
+    boolean isNum;
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
@@ -101,50 +102,39 @@ public class frame extends javax.swing.JFrame {
                     .addComponent(txtAge, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtRate, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtDep))
+                .addGap(58, 58, 58)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(110, 110, 110)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnAdd)
-                            .addComponent(btnClear)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(126, 126, 126)
-                        .addComponent(btnExit)))
-                .addContainerGap(241, Short.MAX_VALUE))
+                    .addComponent(btnClear)
+                    .addComponent(btnAdd)
+                    .addComponent(btnExit))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(22, 22, 22)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel7))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel1))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(txtLName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel2))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel3)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(38, 38, 38)
-                                .addComponent(btnAdd)
-                                .addGap(63, 63, 63)
-                                .addComponent(btnClear)))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtRate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4)))
-                    .addComponent(btnExit, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(22, 22, 22)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7)
+                    .addComponent(btnAdd))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1)
+                    .addComponent(btnClear))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtLName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2)
+                    .addComponent(btnExit))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtRate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtHWork, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -153,40 +143,25 @@ public class frame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtDep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>                        
 
-    void functionExample(){
-        ArrayList data = new ArrayList();
+    void parseFunction(){
         try {
             Integer.parseInt(txtID.getText());
+            isNum = true;
         }
         catch (final NumberFormatException e) {
             JOptionPane.showMessageDialog(this, "ID number must be a number, please use a number.",
                     "Error Message", JOptionPane.ERROR_MESSAGE);
         }
-        String ID = txtID.getText();
-        String fName = txtName.getText();
-        String lName = txtLName.getText();
-        String age = txtAge.getText();
-        String department = txtDep.getText();
-        String hWork = txtHWork.getText();
-        String rate = txtRate.getName();
-        
-        data.add(ID);
-        data.add(fName);
-        data.add(lName);
-        data.add(age);
-        data.add(department);
-        data.add(hWork);
-        data.add(rate);
     }
+    //add button
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {                                       
-        
-        
+        isNum = false;
         if(txtAge.getText().isEmpty() || txtDep.getText().isEmpty() || txtHWork.getText().isEmpty() || txtID.getText().isEmpty() || txtLName.getText().isEmpty() || 
                 txtName.getText().isEmpty() || txtRate.getText().isEmpty())
         {
@@ -195,30 +170,39 @@ public class frame extends javax.swing.JFrame {
         }
         else
         {
-            FileWriter f0 = null;
-            try {
-                functionExample();
-                f0 = new FileWriter("data.txt");
-                String newLine = System.getProperty("line.separator");
-                f0.write("ID: " + txtID.getText() + ", Name:" + txtName.getText() + ", Last Name:" + txtLName.getText() + ", Age:" + txtAge.getText() + ", Department:" + txtDep.getText() + ", Hours Worked:" + txtHWork.getText() + ", Rate:" + txtRate.getText());
-                f0.close();
-            } catch (IOException ex) {
-                Logger.getLogger(frame.class.getName()).log(Level.SEVERE, null, ex);
-            } finally {
+            parseFunction();
+            if(isNum)
+            {
+                // adds file
+                FileWriter f0 = null;
                 try {
+                    f0 = new FileWriter("data.txt");
+                    String newLine = System.getProperty("line.separator");
+                    // writes information to file
+                    f0.write("ID: " + txtID.getText() + ", Name:" + txtName.getText() + ", Last Name:" + txtLName.getText() + ", Age:" + txtAge.getText() + ", Department:" + txtDep.getText() + ", Hours Worked:" + txtHWork.getText() + ", Rate:" + txtRate.getText());
                     f0.close();
                 } catch (IOException ex) {
                     Logger.getLogger(frame.class.getName()).log(Level.SEVERE, null, ex);
+                } finally {
+                    try {
+                        f0.close();
+                    } catch (IOException ex) {
+                        Logger.getLogger(frame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                 }
+                // tells user data was added
+                JOptionPane.showMessageDialog(this, "Successfully added data.",
+                        "Success", JOptionPane.OK_OPTION);
             }
-
         }
     }                                      
 
+    //exits the program
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {                                        
         System.exit(0);
     }                                       
 
+    //clears the text boxes
     private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {                                         
         txtAge.setText("");
         txtDep.setText("");
@@ -227,6 +211,7 @@ public class frame extends javax.swing.JFrame {
         txtLName.setText("");
         txtName.setText("");
         txtRate.setText("");
+        isNum = false;
     }                                        
 
     /**
