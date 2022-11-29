@@ -1,7 +1,7 @@
 User Manual:
 Imput the information as needed. The add button will add this information to a text file. The clear button will clear information. The exit button will exit you out of the program.
 
-Here it is blank, type the appropriate information into the text boxes.
+Here it is blank, type the appropriate information into the text boxes. For the ID you may only enter numbers. For the age, hours worked, and rate, however, you may enter letters to manually spell them out (i.e twenty instead of 20).
 
 ![image](https://user-images.githubusercontent.com/114167189/204422846-30ef9df5-ad82-48ea-8c62-285440e00ec6.png)
 
