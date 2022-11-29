@@ -1,7 +1,7 @@
 Employee View, Natalie Raptoplous
 
 An app that can add/view/find employees. would include all personal info and things like hourly wages, monthly salary, etc. It would be useful for companies,
-and I believe it is something I can make. Java has been the hardest language for me to learn, but I wanted to create something practical.
+and I believe it is something I can make. Java has been the hardest language for me to learn, but I wanted to create something practical. While it may not be complex, I wanted to focus on creating something that would work than trying to do too many things at once.
 
 UML:
 
