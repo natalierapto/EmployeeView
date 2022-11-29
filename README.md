@@ -1,5 +1,3 @@
-* final code and demo to be added *
-
 Employee View, Natalie Raptoplous
 
 An app that can add/view/find employees. would include all personal info and things like hourly wages, monthly salary, etc. It would be useful for companies,
